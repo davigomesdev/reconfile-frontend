@@ -14,7 +14,7 @@ interface UseAuthProps {
   reaload: (options?: RefetchOptions) => Promise<QueryObserverResult<TApiResponse<IUser>, Error>>;
 }
 
-export const REFERCH_INTERVAL = 100000;
+export const REFETCH_INTERVAL = 100000;
 export const CURRENT_USER_KEY = 'current_user';
 
 export const useAuth = (): UseAuthProps => {
@@ -29,7 +29,7 @@ export const useAuth = (): UseAuthProps => {
     queryKey: [CURRENT_USER_KEY],
     queryFn: currentUser,
     retry: false,
-    refetchInterval: REFERCH_INTERVAL,
+    refetchInterval: REFETCH_INTERVAL,
   });
 
   React.useEffect(() => {

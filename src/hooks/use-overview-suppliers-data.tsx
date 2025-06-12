@@ -15,7 +15,7 @@ interface UseOverviewSuppliersDataProps {
   ) => Promise<QueryObserverResult<TApiResponse<ISupplierOverview>, Error>>;
 }
 
-export const REFERCH_INTERVAL = 100000;
+export const REFETCH_INTERVAL = 100000;
 export const OVERVIEW_SUPPLIERS_KEY = 'overview_suppliers';
 
 export const useOverviewSuppliersData = (): UseOverviewSuppliersDataProps => {
@@ -23,7 +23,7 @@ export const useOverviewSuppliersData = (): UseOverviewSuppliersDataProps => {
     queryKey: [OVERVIEW_SUPPLIERS_KEY],
     queryFn: overviewSuppliers,
     placeholderData: keepPreviousData,
-    refetchInterval: REFERCH_INTERVAL,
+    refetchInterval: REFETCH_INTERVAL,
   });
 
   return {

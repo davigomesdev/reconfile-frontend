@@ -16,7 +16,7 @@ interface UseSuppliersDataProps {
   ) => Promise<QueryObserverResult<TApiListResponse<ISupplier>, Error>>;
 }
 
-export const REFERCH_INTERVAL = 100000;
+export const REFETCH_INTERVAL = 100000;
 export const SUPPLIERS_KEY = 'suppliers';
 
 export const useSuppliersData = (input?: ListSupplierDTO): UseSuppliersDataProps => {
@@ -24,7 +24,7 @@ export const useSuppliersData = (input?: ListSupplierDTO): UseSuppliersDataProps
     queryKey: [SUPPLIERS_KEY, input],
     queryFn: async () => listSuppliers(input),
     placeholderData: keepPreviousData,
-    refetchInterval: REFERCH_INTERVAL,
+    refetchInterval: REFETCH_INTERVAL,
   });
 
   return {
