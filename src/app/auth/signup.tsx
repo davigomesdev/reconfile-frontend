@@ -89,10 +89,7 @@ const SignUp: React.FC = () => {
           <img alt="logo" className="w-full" src="/logo.png" />
         </div>
         <div>
-          <Typography.H3 className="text-center">Entre com sua conta</Typography.H3>
-          <Typography.P className="text-center">
-            Insira seus dados para entrar no sistema.
-          </Typography.P>
+          <Typography.H3 className="text-center">Crie sua conta</Typography.H3>
         </div>
         <Form {...form}>
           <form
