@@ -14,6 +14,9 @@ interface UseAuthProps {
   reaload: (options?: RefetchOptions) => Promise<QueryObserverResult<TApiResponse<IUser>, Error>>;
 }
 
+export const REFERCH_INTERVAL = 100000;
+export const CURRENT_USER_KEY = 'current_user';
+
 export const useAuth = (): UseAuthProps => {
   const [auth, setAuth] = React.useState<IUser | null>(null);
 
@@ -23,7 +26,7 @@ export const useAuth = (): UseAuthProps => {
     data: user,
     refetch: reaload,
   } = useQuery<TApiResponse<IUser>>({
-    queryKey: ['current-user'],
+    queryKey: [CURRENT_USER_KEY],
     queryFn: currentUser,
     retry: false,
   });
