@@ -29,6 +29,7 @@ export const useAuth = (): UseAuthProps => {
     queryKey: [CURRENT_USER_KEY],
     queryFn: currentUser,
     retry: false,
+    refetchInterval: REFERCH_INTERVAL,
   });
 
   React.useEffect(() => {
