@@ -104,7 +104,7 @@ const Home: React.FC = () => {
         <Typography.H2>Fornecedores</Typography.H2>
       </section>
       <Separator />
-      <section className="grid grid-cols-4 gap-4">
+      <section className="grid grid-cols-2 gap-4 lg:grid-cols-4">
         <Card>
           <Card.Content className="flex items-center justify-center gap-4 p-5">
             <div className="flex h-[70px] w-[70px] items-center justify-center rounded-full border border-blue-500 text-blue-500 [&_svg]:size-10">
