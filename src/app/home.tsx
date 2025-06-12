@@ -421,7 +421,7 @@ const Home: React.FC = () => {
                   htmlFor="file-input"
                 >
                   {importSuppliersMutation.isPending ? (
-                    <Spinner />
+                    <>Importando dados...</>
                   ) : (
                     <>
                       <FileUp />
